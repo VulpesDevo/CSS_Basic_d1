@@ -13,6 +13,31 @@
         #D8B4E2
         #AE759F
      -->
+     <style>
+        #selector h2 {
+            color: blue;
+        }
+        
+        /* Target the <li> elements within the <ul> element */
+        #selector ul li {
+            list-style-type: disc;
+        }
+        
+        /* Target the <li> elements within the <div> element within the <ul> */
+        #selector ul div li {
+            font-weight: bold;
+        }
+        
+        /* Target the first <li> element within the <ul> */
+        #selector ul li:first-child {
+            color: red;
+        }
+        
+        /* Target the last <li> element within the <ul> */
+        #selector ul li:last-child {
+            color: green;
+        }
+     </style>
     
 </head>
 <body>
@@ -80,25 +105,40 @@
         <section id="card-component">
             <h2>Card Title</h2>
             <hr>
-            <img src="https://images.unsplash.com/photo-1682687982204-f1a77dcc3067?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="" width="200px" height="150px">
-            <p>This is a random card description. You may add thing in this text related to image</p>
+           
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1682687982204-f1a77dcc3067?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="" width="200px" height="150px">
+          
+                <!-- A div with card__details class to hold the details in the card  -->
+                <div class="card__details">
+        
+          
+                  <p>This is a random card description. You may add thing in this text related to image</p>
+          
+                  <button>Read more</button>
+                </div>
+          
+          
+              </div>
         </section>
+        
 
         <hr>
 
         <!-- CSS UNIT -->
         <section id="css-unit">
-            <h2>CSS Units</h2>
+            <h2 style="font-size: 24px; color: #333;">CSS Units</h2>
             <div>
-                <p style="page: initial;">Page width</p>
-                <div style="content: initial;">Content width</div>
+                <p style="width: 100px; ">Page width (in pixels)</p>
+                <div style="width: 80%; ">Content width (80% of the parent width)</div>
             </div>
-
+        
             <div>
-                <p>This is a rem unit</p>
-                <p>This is an em unit</p>
+                <p style="font-size: 1.5rem; color: #00f;">This is a rem unit (relative to the root font size)</p>
+                <p style="font-size: 1.2em; color: #f00;">This is an em unit (relative to the parent font size)</p>
             </div>
         </section>
+        
         
         <hr>
 
